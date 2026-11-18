@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BLACKWALL // Netrunner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="afterlife">
+<div id="app">
+  <header id="top">
+    <div class="logo glitchable" data-text="BLACKWALL">BLACKWALL</div>
+    <div class="title glitchable" data-text="NET // RUNNER">NET // RUNNER</div>
+    <div class="ver">v.0.20.77 <span id="ver-sub">(unregistered deck)</span></div>
+  </header>
+
+  <aside id="left" class="panel">
+    <h2 class="ptitle">=== HELP ===</h2>
+    <section class="card">
+      <button class="card-h">READ ME!</button>
+      <div class="card-b" id="readme"></div>
+    </section>
+    <section class="card">
+      <button class="card-h">GLOSSARY</button>
+      <div class="card-b">
+        <p>It's a big wide Net out there. Can't be expected to know everything. That's what data storage is for.</p>
+        <div id="glossary" class="btnlist"></div>
+      </div>
+    </section>
+    <section class="card">
+      <button class="card-h">MAP</button>
+      <div class="card-b"><pre id="map"></pre></div>
+    </section>
+  </aside>
+
+  <main id="center">
+    <div id="loc">
+      <div>PARENT DIRECTORY: <span id="loc-parent"></span></div>
+      <div>CURRENT DIRECTORY: <span id="loc-current"></span></div>
+      <div>CHILD DIRECTORIES: <span id="loc-child"></span></div>
+    </div>
+    <div id="meters">
+      <div class="meter" id="m-hp"><span class="lbl">NEURAL</span><div class="bar"><i></i></div><span class="val"></span></div>
+      <div class="meter" id="m-ram"><span class="lbl">RAM</span><div class="pips"></div><span class="val"></span></div>
+      <div class="meter" id="m-trace"><span class="lbl">TRACE</span><div class="bar"><i></i></div><span class="val"></span></div>
+      <div class="meter" id="m-exp"><span class="lbl">SIGNAL</span><div class="bar"><i></i></div><span class="val"></span></div>
+      <div class="meter" id="m-ed"><span class="lbl">€$</span><span class="val"></span></div>
+    </div>
+    <form id="cmdline" autocomplete="off">
+      <label id="prompt" for="cmd"></label>
+      <input id="cmd" type="text" spellcheck="false" autocapitalize="off" placeholder="type your commands here">
+    </form>
+    <div id="term-wrap">
+      <canvas id="bgart"></canvas>
+      <div id="out"></div>
+    </div>
+  </main>
+
+  <aside id="right" class="panel">
+    <h2 class="ptitle">=== SOFTWARE ===</h2>
+    <section class="card collapsed">
+      <button class="card-h">READ ME!</button>
+      <div class="card-b" id="deckinfo"></div>
+    </section>
+    <section class="card">
+      <button class="card-h">IRC // #lowtide</button>
+      <div class="card-b"><div id="irc"></div></div>
+    </section>
+    <section class="card collapsed">
+      <button class="card-h">RADIO</button>
+      <div class="card-b">
+        <p>Running without music is like running without ICE-breakers. Technically possible. Deeply uncool. Pirate stations, all procedurally bootlegged off the Net.</p>
+        <div id="radio" class="btnlist"></div>
+      </div>
+    </section>
+    <section class="card collapsed">
+      <button class="card-h">NOTES</button>
+      <div class="card-b"><textarea id="notes" placeholder="passwords, hosts, things that whispered your name..."></textarea></div>
+    </section>
+    <section class="card collapsed">
+      <button class="card-h">THEMES</button>
+      <div class="card-b">
+        <p>Every runner likes their terminal a certain way. The interface on this deck is ancient, so options are thin. Some are eye-searing. You've been warned.</p>
+        <div id="themes" class="btnlist"></div>
+      </div>
+    </section>
+  </aside>
+
+  <footer id="bottom">
+    <div class="zmark">//</div>
+    <div class="foot glitchable" id="foot" data-text="// UNREGISTERED DECK /|\ NETWATCH CANNOT SEE YOU \\">// UNREGISTERED DECK /|\ NETWATCH CANNOT SEE YOU \\</div>
+    <div class="qr" aria-hidden="true"></div>
+  </footer>
+</div>
+
+<div id="crt" aria-hidden="true"></div>
+<div id="flash" aria-hidden="true"><pre></pre><div class="msg"></div></div>
+<div id="overlay" hidden></div>
+
+<script src="js/util.js"></script>
+<script src="js/data.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/breach.js"></script>
+<script src="js/game.js"></script>
+<script src="js/net.js"></script>
+<script src="js/ui.js"></script>
+<script>BW.boot();</script>
+</body>
+</html>
